@@ -11,16 +11,7 @@ foreach ($server in $servers) {
 
     if ($fileExists) {
         Write-Host "File $fileToCheck exists on $server"
-        $userInput = Read-Host "Do you want to delete the file (y/n)?"
-        if ($userInput -eq "y") {
-            Invoke-Command -ScriptBlock {
-                param($path)
-                rm $path
-            } -ArgumentList $remotePath
-            Write-Host "Removing file: $fileToCheck"
-        } else {
-          Write-Host "File not removed"
-    } else {
+  } else {
         Write-Host "File $fileToCheck does not exist on $server"
     }
 }

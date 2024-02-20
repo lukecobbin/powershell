@@ -11,4 +11,5 @@ Reg_Edit.ps1 is PowerShell that adds registry entries
 This is useful when needing to run on multiple devices
 It is safer than manually editing the registry
 
+The current values enable Schannel Logging level 5, Log informational, success events and error messages
 Make sure to change the values in the file to the values you wish to edit
